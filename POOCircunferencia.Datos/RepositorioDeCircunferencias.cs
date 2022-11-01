@@ -47,5 +47,28 @@ namespace POOCircunferencia.Datos
         {
             return listaCircunferencia;
         }
+
+        public bool Borrar(Circunferencia circ)
+        {
+            if (listaCircunferencia.Contains(circ))
+            {
+                listaCircunferencia.Remove(circ);
+                return true;
+            }
+
+            return false;
+        }
+
+        public List<Circunferencia> FiltrarDatos(int radioFiltro)
+        {
+            return listaCircunferencia
+                .Where(c => c.Radio > radioFiltro)
+                .ToList();
+        }
+
+        public int GetCantidadFiltrada(int radioFiltro)
+        {
+            return listaCircunferencia.Count(c => c.Radio > radioFiltro);
+        }
     }
 }

@@ -18,6 +18,15 @@ namespace POOCircunferencia.Windows
             InitializeComponent();
         }
 
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            if (circunferencia!=null)
+            {
+                RadioTextBox.Text = circunferencia.Radio.ToString();
+            }
+        }
+
         private void CancelarButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
@@ -27,8 +36,18 @@ namespace POOCircunferencia.Windows
         {
             if (ValidarDatos())
             {
-                circunferencia = new Circunferencia();
+                //Veo si no existe ya una circunferencia
+                if (circunferencia==null)
+                {
+                    circunferencia = new Circunferencia();
+                    
+                }
                 circunferencia.Radio = int.Parse(RadioTextBox.Text);
+                if (!circunferencia.Validar())
+                {
+                    errorProvider1.SetError(RadioTextBox,"Radio fuera del rango permitido");
+                    return;
+                }
 
                 DialogResult = DialogResult.OK;
             }
@@ -36,12 +55,30 @@ namespace POOCircunferencia.Windows
 
         private bool ValidarDatos()
         {
-            return true;
+            bool valido = true;
+            errorProvider1.Clear();
+            //Controlar que se ingrese un número
+            if (!int.TryParse(RadioTextBox.Text, out int radio))
+            {
+                valido = false;
+                errorProvider1.SetError(RadioTextBox,"Radio mal ingresado");
+            }
+            //else if (radio<=0)
+            //{
+            //    valido = false;
+            //    errorProvider1.SetError(RadioTextBox,"El radio debe ser positivo");
+            //}
+            return valido;
         }
 
         public Circunferencia GetCircunferencia()
         {
             return circunferencia;
+        }
+
+        public void SetCircunferencia(Circunferencia circ)
+        {
+            circunferencia = circ;
         }
     }
 }

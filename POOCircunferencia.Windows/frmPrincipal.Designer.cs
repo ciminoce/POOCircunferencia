@@ -29,27 +29,27 @@ namespace POOCircunferencia.Windows
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.TotalesPanel = new System.Windows.Forms.Panel();
-            this.GrillaPanel = new System.Windows.Forms.Panel();
+            this.NuevoToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.BorrarToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.EditarToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.FiltroToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.SalirToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.TotalesPanel = new System.Windows.Forms.Panel();
+            this.CantidadLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.GrillaPanel = new System.Windows.Forms.Panel();
             this.CircDataGridView = new System.Windows.Forms.DataGridView();
             this.colRadio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPerimetro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSuperficie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.CantidadLabel = new System.Windows.Forms.Label();
-            this.NuevoToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.BorrarToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.EditarToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.SalirToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.TotalesPanel.SuspendLayout();
             this.GrillaPanel.SuspendLayout();
@@ -63,7 +63,7 @@ namespace POOCircunferencia.Windows
             this.BorrarToolStripButton,
             this.EditarToolStripButton,
             this.toolStripSeparator1,
-            this.toolStripButton4,
+            this.FiltroToolStripButton,
             this.toolStripButton5,
             this.toolStripSeparator2,
             this.SalirToolStripButton});
@@ -72,98 +72,6 @@ namespace POOCircunferencia.Windows
             this.toolStrip1.Size = new System.Drawing.Size(800, 58);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // TotalesPanel
-            // 
-            this.TotalesPanel.Controls.Add(this.CantidadLabel);
-            this.TotalesPanel.Controls.Add(this.label1);
-            this.TotalesPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TotalesPanel.Location = new System.Drawing.Point(0, 350);
-            this.TotalesPanel.Name = "TotalesPanel";
-            this.TotalesPanel.Size = new System.Drawing.Size(800, 100);
-            this.TotalesPanel.TabIndex = 1;
-            // 
-            // GrillaPanel
-            // 
-            this.GrillaPanel.Controls.Add(this.CircDataGridView);
-            this.GrillaPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GrillaPanel.Location = new System.Drawing.Point(0, 58);
-            this.GrillaPanel.Name = "GrillaPanel";
-            this.GrillaPanel.Size = new System.Drawing.Size(800, 292);
-            this.GrillaPanel.TabIndex = 2;
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 58);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 58);
-            // 
-            // CircDataGridView
-            // 
-            this.CircDataGridView.AllowUserToAddRows = false;
-            this.CircDataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
-            this.CircDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.CircDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CircDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colRadio,
-            this.colPerimetro,
-            this.colSuperficie});
-            this.CircDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CircDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.CircDataGridView.MultiSelect = false;
-            this.CircDataGridView.Name = "CircDataGridView";
-            this.CircDataGridView.ReadOnly = true;
-            this.CircDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.CircDataGridView.Size = new System.Drawing.Size(800, 292);
-            this.CircDataGridView.TabIndex = 0;
-            // 
-            // colRadio
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colRadio.DefaultCellStyle = dataGridViewCellStyle2;
-            this.colRadio.HeaderText = "Radio";
-            this.colRadio.Name = "colRadio";
-            this.colRadio.ReadOnly = true;
-            // 
-            // colPerimetro
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colPerimetro.DefaultCellStyle = dataGridViewCellStyle3;
-            this.colPerimetro.HeaderText = "Perímetro";
-            this.colPerimetro.Name = "colPerimetro";
-            this.colPerimetro.ReadOnly = true;
-            // 
-            // colSuperficie
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colSuperficie.DefaultCellStyle = dataGridViewCellStyle4;
-            this.colSuperficie.HeaderText = "Superficie";
-            this.colSuperficie.Name = "colSuperficie";
-            this.colSuperficie.ReadOnly = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cantidad:";
-            // 
-            // CantidadLabel
-            // 
-            this.CantidadLabel.AutoSize = true;
-            this.CantidadLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CantidadLabel.Location = new System.Drawing.Point(84, 29);
-            this.CantidadLabel.Name = "CantidadLabel";
-            this.CantidadLabel.Size = new System.Drawing.Size(14, 13);
-            this.CantidadLabel.TabIndex = 0;
-            this.CantidadLabel.Text = "0";
             // 
             // NuevoToolStripButton
             // 
@@ -185,6 +93,7 @@ namespace POOCircunferencia.Windows
             this.BorrarToolStripButton.Size = new System.Drawing.Size(43, 55);
             this.BorrarToolStripButton.Text = "Borrar";
             this.BorrarToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BorrarToolStripButton.Click += new System.EventHandler(this.BorrarToolStripButton_Click);
             // 
             // EditarToolStripButton
             // 
@@ -195,16 +104,23 @@ namespace POOCircunferencia.Windows
             this.EditarToolStripButton.Size = new System.Drawing.Size(41, 55);
             this.EditarToolStripButton.Text = "Editar";
             this.EditarToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.EditarToolStripButton.Click += new System.EventHandler(this.EditarToolStripButton_Click);
             // 
-            // toolStripButton4
+            // toolStripSeparator1
             // 
-            this.toolStripButton4.Image = global::POOCircunferencia.Windows.Properties.Resources.filled_filter_36px;
-            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(41, 55);
-            this.toolStripButton4.Text = "Filtrar";
-            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 58);
+            // 
+            // FiltroToolStripButton
+            // 
+            this.FiltroToolStripButton.Image = global::POOCircunferencia.Windows.Properties.Resources.filled_filter_36px;
+            this.FiltroToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.FiltroToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.FiltroToolStripButton.Name = "FiltroToolStripButton";
+            this.FiltroToolStripButton.Size = new System.Drawing.Size(41, 55);
+            this.FiltroToolStripButton.Text = "Filtrar";
+            this.FiltroToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.FiltroToolStripButton.Click += new System.EventHandler(this.FiltroToolStripButton_Click);
             // 
             // toolStripButton5
             // 
@@ -215,6 +131,12 @@ namespace POOCircunferencia.Windows
             this.toolStripButton5.Size = new System.Drawing.Size(60, 55);
             this.toolStripButton5.Text = "Restaurar";
             this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 58);
             // 
             // SalirToolStripButton
             // 
@@ -225,6 +147,88 @@ namespace POOCircunferencia.Windows
             this.SalirToolStripButton.Size = new System.Drawing.Size(40, 55);
             this.SalirToolStripButton.Text = "Salir";
             this.SalirToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // TotalesPanel
+            // 
+            this.TotalesPanel.Controls.Add(this.CantidadLabel);
+            this.TotalesPanel.Controls.Add(this.label1);
+            this.TotalesPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TotalesPanel.Location = new System.Drawing.Point(0, 350);
+            this.TotalesPanel.Name = "TotalesPanel";
+            this.TotalesPanel.Size = new System.Drawing.Size(800, 100);
+            this.TotalesPanel.TabIndex = 1;
+            // 
+            // CantidadLabel
+            // 
+            this.CantidadLabel.AutoSize = true;
+            this.CantidadLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CantidadLabel.Location = new System.Drawing.Point(84, 29);
+            this.CantidadLabel.Name = "CantidadLabel";
+            this.CantidadLabel.Size = new System.Drawing.Size(14, 13);
+            this.CantidadLabel.TabIndex = 0;
+            this.CantidadLabel.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cantidad:";
+            // 
+            // GrillaPanel
+            // 
+            this.GrillaPanel.Controls.Add(this.CircDataGridView);
+            this.GrillaPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GrillaPanel.Location = new System.Drawing.Point(0, 58);
+            this.GrillaPanel.Name = "GrillaPanel";
+            this.GrillaPanel.Size = new System.Drawing.Size(800, 292);
+            this.GrillaPanel.TabIndex = 2;
+            // 
+            // CircDataGridView
+            // 
+            this.CircDataGridView.AllowUserToAddRows = false;
+            this.CircDataGridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Silver;
+            this.CircDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.CircDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CircDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colRadio,
+            this.colPerimetro,
+            this.colSuperficie});
+            this.CircDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CircDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.CircDataGridView.MultiSelect = false;
+            this.CircDataGridView.Name = "CircDataGridView";
+            this.CircDataGridView.ReadOnly = true;
+            this.CircDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.CircDataGridView.Size = new System.Drawing.Size(800, 292);
+            this.CircDataGridView.TabIndex = 0;
+            // 
+            // colRadio
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colRadio.DefaultCellStyle = dataGridViewCellStyle6;
+            this.colRadio.HeaderText = "Radio";
+            this.colRadio.Name = "colRadio";
+            this.colRadio.ReadOnly = true;
+            // 
+            // colPerimetro
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colPerimetro.DefaultCellStyle = dataGridViewCellStyle7;
+            this.colPerimetro.HeaderText = "Perímetro";
+            this.colPerimetro.Name = "colPerimetro";
+            this.colPerimetro.ReadOnly = true;
+            // 
+            // colSuperficie
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colSuperficie.DefaultCellStyle = dataGridViewCellStyle8;
+            this.colSuperficie.HeaderText = "Superficie";
+            this.colSuperficie.Name = "colSuperficie";
+            this.colSuperficie.ReadOnly = true;
             // 
             // frmPrincipal
             // 
@@ -256,7 +260,7 @@ namespace POOCircunferencia.Windows
         private System.Windows.Forms.ToolStripButton BorrarToolStripButton;
         private System.Windows.Forms.ToolStripButton EditarToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton FiltroToolStripButton;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton SalirToolStripButton;
