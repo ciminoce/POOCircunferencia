@@ -1,4 +1,5 @@
-﻿using POOCircunferencia.Datos;
+﻿using Microsoft.VisualBasic;
+using POOCircunferencia.Datos;
 using POOCircunferencia.Entidades;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,8 @@ namespace POOCircunferencia.Windows
 {
     public partial class frmPrincipal : Form
     {
+        //Variable para controlar los cambios
+        bool hayCambios = false;
         public frmPrincipal()
         {
             InitializeComponent();
@@ -99,7 +102,8 @@ namespace POOCircunferencia.Windows
             AgregarFila(r);
             MessageBox.Show("Circunferencia agregada");
             cantidad = repositorio.GetCantidad();
-            //MostrarTotal();
+            hayCambios = true;
+            MostrarTotal();
         }
 
         private void BorrarToolStripButton_Click(object sender, EventArgs e)
@@ -130,7 +134,7 @@ namespace POOCircunferencia.Windows
                 cantidad = repositorio.GetCantidad();
                 MostrarTotal();
                 MessageBox.Show("Registro eliminado", "Mensaje", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                
+                hayCambios = true;
             }
             else
             {
@@ -158,13 +162,27 @@ namespace POOCircunferencia.Windows
 
             circ = frm.GetCircunferencia();
             SetearFila(r,circ);
+            hayCambios = true;
             MessageBox.Show("Circunferencia Modificada!!", 
                 "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void FiltroToolStripButton_Click(object sender, EventArgs e)
         {
-            int radioFiltro = 10;
+            //int radioFiltro = 10;
+            //lista = repositorio.FiltrarDatos(radioFiltro);
+            //MostrarLista();
+            //cantidad = repositorio.GetCantidadFiltrada(radioFiltro);
+            //MostrarTotal();
+            var radioString=Interaction.InputBox("Ingrese el valor del radio:", "Radio a Filtrar", "0", 400, 400);
+            if (!int.TryParse(radioString,out int radioFiltro))
+            {
+                return;
+            }
+            else if(radioFiltro<=0)
+            {
+                return;
+            }
             lista = repositorio.FiltrarDatos(radioFiltro);
             MostrarLista();
             cantidad = repositorio.GetCantidadFiltrada(radioFiltro);
@@ -178,6 +196,25 @@ namespace POOCircunferencia.Windows
             cantidad = repositorio.GetCantidad();
             MostrarTotal();
 
+        }
+
+        private void GuardarToolStripButton_Click(object sender, EventArgs e)
+        {
+            ManejadorArchivoSecuencial
+                .GuardarEnArchivoSecuencia(repositorio.GetLista());
+            MessageBox.Show("Registros Guardados", "Confirmación",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Exclamation);
+        }
+
+        private void SalirToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (hayCambios)
+            {
+                ManejadorArchivoSecuencial.GuardarEnArchivoSecuencia(repositorio.GetLista());
+            }
+
+            Application.Exit();
         }
     }
 }

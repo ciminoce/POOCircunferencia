@@ -41,6 +41,8 @@ namespace POOCircunferencia.Windows
             this.FiltroToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.GuardarToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.SalirToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.TotalesPanel = new System.Windows.Forms.Panel();
             this.CantidadLabel = new System.Windows.Forms.Label();
@@ -66,6 +68,8 @@ namespace POOCircunferencia.Windows
             this.FiltroToolStripButton,
             this.toolStripButton5,
             this.toolStripSeparator2,
+            this.GuardarToolStripButton,
+            this.toolStripSeparator4,
             this.SalirToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -138,6 +142,22 @@ namespace POOCircunferencia.Windows
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 58);
             // 
+            // GuardarToolStripButton
+            // 
+            this.GuardarToolStripButton.Image = global::POOCircunferencia.Windows.Properties.Resources.save_36px;
+            this.GuardarToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.GuardarToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.GuardarToolStripButton.Name = "GuardarToolStripButton";
+            this.GuardarToolStripButton.Size = new System.Drawing.Size(53, 55);
+            this.GuardarToolStripButton.Text = "Guardar";
+            this.GuardarToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.GuardarToolStripButton.Click += new System.EventHandler(this.GuardarToolStripButton_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 58);
+            // 
             // SalirToolStripButton
             // 
             this.SalirToolStripButton.Image = global::POOCircunferencia.Windows.Properties.Resources.exit_36px;
@@ -147,6 +167,7 @@ namespace POOCircunferencia.Windows
             this.SalirToolStripButton.Size = new System.Drawing.Size(40, 55);
             this.SalirToolStripButton.Text = "Salir";
             this.SalirToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.SalirToolStripButton.Click += new System.EventHandler(this.SalirToolStripButton_Click);
             // 
             // TotalesPanel
             // 
@@ -235,6 +256,7 @@ namespace POOCircunferencia.Windows
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.GrillaPanel);
             this.Controls.Add(this.TotalesPanel);
             this.Controls.Add(this.toolStrip1);
@@ -272,5 +294,7 @@ namespace POOCircunferencia.Windows
         private System.Windows.Forms.DataGridViewTextBoxColumn colSuperficie;
         private System.Windows.Forms.Label CantidadLabel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripButton GuardarToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
     }
 }

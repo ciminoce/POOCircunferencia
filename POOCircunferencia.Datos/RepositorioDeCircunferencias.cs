@@ -15,14 +15,15 @@ namespace POOCircunferencia.Datos
             listaCircunferencia = new List<Circunferencia>();
             //Se agregan circ hardcodeadas a los efectos de
             //probar métodos
-            var circ = new Circunferencia(20);
-            var circ2 = new Circunferencia(5);
-            var circ3 = new Circunferencia(17);
-            var circ4 = new Circunferencia(24);
-            Agregar(circ);
-            Agregar(circ2);
-            Agregar(circ3);
-            Agregar(circ4);
+            //var circ = new Circunferencia(20);
+            //var circ2 = new Circunferencia(5);
+            //var circ3 = new Circunferencia(17);
+            //var circ4 = new Circunferencia(24);
+            //Agregar(circ);
+            //Agregar(circ2);
+            //Agregar(circ3);
+            //Agregar(circ4);
+            listaCircunferencia=ManejadorArchivoSecuencial.LeerArchivoSecuencia();
         }
         /// <summary>
         /// Método para agregar un obj Circunferencia a la lista
